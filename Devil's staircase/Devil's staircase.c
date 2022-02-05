@@ -2,7 +2,7 @@
 #include <math.h>
 
 #define N 100
-#define INF 10
+#define INF 3
 
 void stairs(double *a, int x1, int x4, int cnt)
 {
@@ -35,12 +35,8 @@ int main(void)
 	for (i = 0; i < N; i++)
 		a[i] = 1.0 / 2;
 
-	/*--- 手動による1段階目追加 ---*/
-	for (i = 0; i <= N / 3; i++)
-		a[i] -= 1.0 / 4;
-
-	for (i = 2*N/3; i < N; i++)
-		a[i] += 1.0 / 4;
+	/*--- 悪魔の階段生成 ---*/
+	stairs(a, 0, N, 2);
 
 	/*--- 表示 ---*/
 	for (i = 0; i < N; i++)
