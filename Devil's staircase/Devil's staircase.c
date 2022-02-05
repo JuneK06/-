@@ -1,6 +1,14 @@
 ﻿#include <stdio.h>
+#include <math.h>
 
 #define N 100
+
+void stairs(double *a, int x1, int x4)
+{
+	int cnt = 0;
+	int x2 = (x4 + 2 * x1) / 3;
+	int x3 = (2 * x4 + x1) / 3;
+}
 
 int main(void)
 {
