@@ -11,6 +11,12 @@ int main(void)
 	for (i = 0; i < N; i++)
 		a[i] = 1.0 / 2;
 
+	for (i = 0; i <= N / 3; i++)
+		a[i] -= 1.0 / 4;
+
+	for (i = 2*N/3; i < N; i++)
+		a[i] += 1.0 / 4;
+
 	for (i = 0; i < N; i++)
 		printf("%d %.3f\n", i, a[i]);
 
