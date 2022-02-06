@@ -1,8 +1,8 @@
 ﻿#include <stdio.h>
 #include <math.h>
 
-#define N 100
-#define INF 5
+#define N 1000
+#define INF 13
 
 void stairs(double *a, int x1, int x4, int cnt)
 {
@@ -30,6 +30,7 @@ int main(void)
 	double a[N + 1];
 
 	int i;
+	FILE* fp = fopen("Devil's staircase.txt", "w");
 
 	/*--- 全ての要素を1/2に設定 ---*/
 	for (i = 0; i <= N; i++)
@@ -38,9 +39,9 @@ int main(void)
 	/*--- 悪魔の階段生成 ---*/
 	stairs(a, 0, N, 2);
 
-	/*--- 表示 ---*/
+	/*--- 出力 ---*/
 	for (i = 0; i <= N; i++)
-		printf("%d %.3f\n", i, a[i]);
+		fprintf(fp, "%d %f\n", i, a[i]);
 
 	return 0;
 }
